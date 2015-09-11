@@ -31,6 +31,7 @@ int main(void)
     //deixara de existir
     for(k=0;k<ITER;k++)
     {
+        if(DEBUG>0) printf("Iteracao %u: ",k)
         rlist(chosen,qt);
         it_escape = 0;
         for(m=0;m<qt;m++)
