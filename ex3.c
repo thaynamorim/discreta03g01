@@ -84,22 +84,22 @@ int main(void)
     return EXIT_SUCCESS;
 }
 
-void vzeros(unsigned v[VMAX])
+void vzeros(unsigned v[VMAX], unsigned n)
 {
     unsigned i;
     if(DEBUG>4) printf("funcao vzeros chamada. Zerando um vetor...\n");
-    for(i=0;i<VMAX;i++)
+    for(i=0;i<n;i++)
         v[i] = 0;
     return;
 }
 
-void mzeros(unsigned m[VMAX][VMAX])
+void mzeros(unsigned x[VMAX][VMAX], unsigned m, unsigned n)
 {
     unsigned i, j;
     if(DEBUG>4) printf("funcao mzeros chamada. Zerando uma matriz...\n");
-    for(i=0;i<VMAX;i++)
-        for(j=0;j<VMAX;j++)
-            m[i][j] = 0;
+    for(i=0;i<m;i++)
+        for(j=0;j<n;j++)
+            x[i][j] = 0;
     return;
 }
 
