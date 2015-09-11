@@ -35,10 +35,11 @@ int main(void)
     if(DEBUG>1) printf("Token em cada lugar:[");
     if(DEBUG>1) printv(l,ql);
     if(DEBUG>1) printf(" ]\n");
-    if(DEBUG>1) printf("Matriz lt:\n");
+    if(DEBUG>1) printf("Matriz lt:");
     if(DEBUG>1) printm(lt,ql,qt);
-    if(DEBUG>1) printf("Matriz tl:\n");
+    if(DEBUG>1) printf("\nMatriz tl:");
     if(DEBUG>1) printm(tl,qt,ql);
+    if(DEBUG>1) printf("\n");
     //deixara de existir
     printf("======= INICIO DA SIMULACAO =======\n");
     for(k=0;k<ITER;k++)
@@ -140,9 +141,9 @@ void printm(unsigned x[VMAX][VMAX], unsigned n, unsigned m)
     unsigned i, j;
     for(i=0;i<n;i++)
     {
+        printf("\n");
         for(j=0;j<m;j++)
             printf("%u ",x[i][j]);
-        printf("\n");
     }
     return;
 }
