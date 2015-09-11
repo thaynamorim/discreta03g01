@@ -8,8 +8,8 @@
 #define DEBUG 0
 #endif
 
-void vzeros(unsigned v[VMAX]);
-void mzeros(unsigned m[VMAX][VMAX]);
+void vzeros(unsigned v[VMAX], unsigned n);
+void mzeros(unsigned x[VMAX][VMAX], unsigned m, unsigned n);
 void rlist(unsigned v[VMAX], unsigned n);
 void printv(unsigned v[VMAX], unsigned n);
 void printm(unsigned x[VMAX][VMAX], unsigned n, unsigned m);
@@ -20,9 +20,9 @@ int main(void)
     unsigned i, j, k, m, flag, it_escape;
     srand(time(NULL));
     //deixara de existir
-    vzeros(l);
-    mzeros(lt);
-    mzeros(tl);
+    vzeros(l, VMAX);
+    mzeros(lt, VMAX, VMAX);
+    mzeros(tl, VMAX, VMAX);
     qt = 2;
     ql = 2;
     l[0] = 4;
