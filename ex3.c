@@ -40,9 +40,10 @@ int main(void)
     if(DEBUG>1) printf("Matriz tl:\n");
     if(DEBUG>1) printm(tl,qt,ql);
     //deixara de existir
+    printf("======= INICIO DA SIMULACAO =======\n");
     for(k=0;k<ITER;k++)
     {
-        if(DEBUG>1) printf("Iteracao %u:\n",k+1);
+        if(DEBUG>1) printf("\nIteracao %u:\n",k+1);
         rlist(chosen,qt);
         it_escape = 0;
         printf("Ordem de tentativa:");
@@ -78,6 +79,7 @@ int main(void)
         if(it_escape == 0) //se nada aconteceu com nenhuma transicao
             break;
     }
+    printf("======= FIM DA SIMULACAO ==========\n");
     return EXIT_SUCCESS;
 }
 
