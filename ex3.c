@@ -86,6 +86,7 @@ int main(void)
 void vzeros(unsigned v[VMAX])
 {
     unsigned i;
+    if(DEBUG>4) printf("funcao vzeros chamada. Zerando um vetor...\n");
     for(i=0;i<VMAX;i++)
         v[i] = 0;
     return;
@@ -94,6 +95,7 @@ void vzeros(unsigned v[VMAX])
 void mzeros(unsigned m[VMAX][VMAX])
 {
     unsigned i, j;
+    if(DEBUG>4) printf("funcao mzeros chamada. Zerando uma matriz...\n");
     for(i=0;i<VMAX;i++)
         for(j=0;j<VMAX;j++)
             m[i][j] = 0;
@@ -119,6 +121,9 @@ void rlist(unsigned v[VMAX], unsigned n)
         else
             if(DEBUG>4) printf("Falhou)\n");
     }
+    if(DEBUG>4) printf("retorno do rlist: [");
+    if(DEBUG>4) printv(v,n);
+    if(DEBUG>4) printf(" ]\n");
     return;
 }
 
