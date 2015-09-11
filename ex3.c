@@ -15,7 +15,7 @@ void rlist(unsigned v[VMAX], unsigned n);
 int main(void)
 {
     unsigned l[VMAX], lt[VMAX][VMAX], tl[VMAX][VMAX], qt, ql, chosen[VMAX];
-    unsigned i, j, k, m;
+    unsigned i, j, k, m, flag, it_escape;
     srand(time(NULL));
     //deixara de existir
     vzeros(l);
@@ -32,8 +32,32 @@ int main(void)
     for(k=0;k<ITER;k++)
     {
         rlist(chosen,qt);
+        it_escape = 0;
+        for(m=0;m<qt;m++)
+        {
+            i = chosen[m]; //sorteio i
+            flag = 1;
+            for(j=0;j<ql;j++)
+                if(lt[j][i] != 0)
+                    if(l[j] < lt[j][i])
+                    {
+                        flag = 0;
+                        break;
+                    }
+            if(flag)
+            {
+                it_escape = 1; //alguma transicao ativou
+                for(j=0;j<ql;j++)
+                    if(lt[j][i] != 0)
+                        l[j] -= lt[j][i];
+                for(j=0;j<ql;j++)
+                    if(tl[i][j] != 0)
+                        l[j] += tl[i][j];
+            }
+        }
+        if(it_escape == 0) //se nada aconteceu com nenhuma transicao
+            break;
     }
-
     return EXIT_SUCCESS;
 }
 
