@@ -13,6 +13,7 @@ void mzeros(unsigned x[VMAX][VMAX], unsigned m, unsigned n);
 void rlist(unsigned v[VMAX], unsigned n);
 void printv(unsigned v[VMAX], unsigned n);
 void printm(unsigned x[VMAX][VMAX], unsigned n, unsigned m);
+void entrada(unsigned i);
 
 int main(void)
 {
@@ -144,6 +145,31 @@ void printm(unsigned x[VMAX][VMAX], unsigned n, unsigned m)
         printf("\n");
         for(j=0;j<m;j++)
             printf("%u ",x[i][j]);
+    }
+    return;
+}
+void entrada(unsigned i)
+{
+    unsigned i, j, lctk, atl, alt, k;
+
+    /* i = Contador de linha.
+     * j = Contador de coluna.
+     * k = Contador simples.
+     * lctk = Quantidade de lugares com Token.
+     * atl = Arco transicao lugar.
+     * alt = Arco lugar transicao.*/
+
+    scanf("%u",&ql);
+    scanf("%u",&qt);
+    scanf("%u",&lctk);
+    scanf("%u",&alt);
+    scanf("%u",&atl);
+       
+    for(k=0;k<lctk;k++)
+    {
+        scanf("%u %u", &i, &j);
+        l[i]= j;
+        printf("%u\n", l[i]);
     }
     return;
 }
