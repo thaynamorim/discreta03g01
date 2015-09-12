@@ -171,5 +171,17 @@ void entrada(unsigned i)
         l[i]= j;
         printf("%u\n", l[i]);
     }
+    for(k=0;k<alt;k++)
+    {
+        scanf("%u %u %u", &i &lctk &j);
+        lt[i][j]= lctk;
+        printf("%u\n", lt[i][j]);
+    }
+    for(k=0;k<atl;k++)
+    {
+        scanf("%u %u %u", &i &lctk &j);
+        tl[i][j] = lctk;
+        printf("%u\n", tl[i][j]);
+    }
     return;
 }
