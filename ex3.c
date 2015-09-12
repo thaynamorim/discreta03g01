@@ -4,8 +4,11 @@
 
 #define VMAX 1000
 #define ITER 1000
+#ifndef PCT
+    #define PCT 50
+#endif
 #ifndef DEBUG
-#define DEBUG 0
+    #define DEBUG 0
 #endif
 
 void vzeros(unsigned v[VMAX], unsigned n);
@@ -65,17 +68,22 @@ int main(void)
                     }
             if(flag)
             {
-                if(DEBUG>1) printf("Transicao %u ativou!\n",i);
                 it_escape = 1; //alguma transicao ativou
-                for(j=0;j<ql;j++)
-                    if(lt[j][i] != 0)
-                        l[j] -= lt[j][i];
-                for(j=0;j<ql;j++)
-                    if(tl[i][j] != 0)
-                        l[j] += tl[i][j];
-                if(DEBUG>1) printf("Token em cada lugar:[");
-                if(DEBUG>1) printv(l,ql);
-                if(DEBUG>1) printf(" ]\n");
+                if((rand()%100 + 1) <= PCT)
+                {
+                    if(DEBUG>1) printf("Transicao %u ativou!\n",i);
+                    for(j=0;j<ql;j++)
+                        if(lt[j][i] != 0)
+                            l[j] -= lt[j][i];
+                    for(j=0;j<ql;j++)
+                        if(tl[i][j] != 0)
+                            l[j] += tl[i][j];
+                    if(DEBUG>1) printf("Token em cada lugar:[");
+                    if(DEBUG>1) printv(l,ql);
+                    if(DEBUG>1) printf(" ]\n");
+                }
+                else
+                    if(DEBUG>1) printf("Transicao %u decidiu nao ativar.\n",i);
             }
         }
         if(it_escape == 0) //se nada aconteceu com nenhuma transicao
@@ -150,7 +158,7 @@ void printm(unsigned x[VMAX][VMAX], unsigned n, unsigned m)
 }
 void entrada(unsigned i)
 {
-    unsigned i, j, lctk, atl, alt, k;
+    unsigned j, lctk, atl, alt, k;
 
     /* i = Contador de linha.
      * j = Contador de coluna.
@@ -159,29 +167,29 @@ void entrada(unsigned i)
      * atl = Arco transicao lugar.
      * alt = Arco lugar transicao.*/
 
-    scanf("%u",&ql);
-    scanf("%u",&qt);
-    scanf("%u",&lctk);
-    scanf("%u",&alt);
-    scanf("%u",&atl);
-       
-    for(k=0;k<lctk;k++)
-    {
-        scanf("%u %u", &i, &j);
-        l[i]= j;
-        printf("%u\n", l[i]);
-    }
-    for(k=0;k<alt;k++)
-    {
-        scanf("%u %u %u", &i &lctk &j);
-        lt[i][j]= lctk;
-        printf("%u\n", lt[i][j]);
-    }
-    for(k=0;k<atl;k++)
-    {
-        scanf("%u %u %u", &i &lctk &j);
-        tl[i][j] = lctk;
-        printf("%u\n", tl[i][j]);
-    }
+    /*    scanf("%u",&ql);
+          scanf("%u",&qt);
+          scanf("%u",&lctk);
+          scanf("%u",&alt);
+          scanf("%u",&atl);
+
+          for(k=0;k<lctk;k++)
+          {
+          scanf("%u %u", &i, &j);
+          l[i]= j;
+          printf("%u\n", l[i]);
+          }
+          for(k=0;k<alt;k++)
+          {
+          scanf("%u %u %u", &i &lctk &j);
+          lt[i][j]= lctk;
+          printf("%u\n", lt[i][j]);
+          }
+          for(k=0;k<atl;k++)
+          {
+          scanf("%u %u %u", &i &lctk &j);
+          tl[i][j] = lctk;
+          printf("%u\n", tl[i][j]);
+          }*/
     return;
 }
