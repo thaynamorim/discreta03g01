@@ -26,14 +26,12 @@ int main(void)
     vzeros(l, VMAX);
     mzeros(lt, VMAX, VMAX);
     mzeros(tl, VMAX, VMAX);
-    FILE *file;
-    file=fopen("entrada.txt","r");
-    fscanf(file,"%u",&ql);
-    fscanf(file,"%u",&qt);
-    fscanf(file,"%u",&lctk);
-    fscanf(file,"%u",&alt);
-    fscanf(file,"%u",&atl);
-    for(k=0;k<lctk;k++)
+    scanf("%u",&ql);
+    scanf("%u",&qt);
+    scanf("%u",&lctk);
+    scanf("%u",&alt);
+    scanf("%u",&atl);
+    /*for(k=0;k<lctk;k++)
     {
         fscanf(file,"%u %u", &i, &j);
         l[i]=j;
@@ -47,8 +45,7 @@ int main(void)
     {
         fscanf(file,"%u %u %u", &i, &lctk, &j);
         tl[i][j] = lctk;
-    }
-    fclose(file);
+    }*/
 
     /*qt = 2;
       ql = 2;
