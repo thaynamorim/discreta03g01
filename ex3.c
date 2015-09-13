@@ -1,3 +1,17 @@
+/**
+ * \file ex3.c
+ * \brief programa que simula rede de petri. 
+ * \author Hugo Albuquerque de Fonsêca <<hugoalbuquerque0@gmail.com>>
+ * \author Lucas Canejo Jurema <<lucasbrgol2010@hotmail.com>>
+ * \author Mateus Lenier Rezende <<mateuslenier@gmail.com>>
+ * \author Paulo Vitor Alves Patriota <<paulovitorpatriota@gmail.com>>
+ * \author Thayna Maria Morim de Barros Barreto <<tmorimbarreto@gmail.com>>  
+ * \version 1.0
+ * \date 2015-09-13
+ */
+/**
+ * \
+* @{ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -17,23 +31,6 @@
 #ifndef DEBUG
 #define DEBUG 0
 #endif
-
-
-
-/**
- * \file ex3.c
- * \brief programa que simula rede de petri. 
- * \author Hugo Albuquerque de Fonsêca <<hugoalbuquerque0@gmail.com>>
- * \author Lucas Canejo Jurema <<lucasbrgol2010@hotmail.com>>
- * \author Mateus Lenier Rezende <<mateuslenier@gmail.com>>
- * \author Paulo Vitor Alves Patriota <<paulovitorpatriota@gmail.com>>
- * \author Thayna Maria Morim de Barros Barreto <<tmorimbarreto@gmail.com>>  
- * \version 1.0
- * \date 2015-09-13
- */
-/**
- * \ 
- * @{ */
 
 void vzeros(unsigned v[VMAX], unsigned n);
 void mzeros(unsigned x[VMAX][VMAX], unsigned m, unsigned n);
