@@ -31,29 +31,21 @@ int main(void)
     scanf("%u",&lctk);
     scanf("%u",&alt);
     scanf("%u",&atl);
-    /*for(k=0;k<lctk;k++)
+    for(k=0;k<lctk;k++)
     {
-        fscanf(file,"%u %u", &i, &j);
+        scanf("%u %u", &i, &j);
         l[i]=j;
     }
     for(k=0;k<alt;k++)
     {
-        fscanf(file,"%u %u %u", &i, &lctk, &j);
+        scanf("%u %u %u", &i, &lctk, &j);
         lt[i][j]= lctk;
     }
     for(k=0;k<atl;k++)
     {
-        fscanf(file,"%u %u %u", &i, &lctk, &j);
+        scanf("%u %u %u", &i, &lctk, &j);
         tl[i][j] = lctk;
-    }*/
-
-    /*qt = 2;
-      ql = 2;
-      l[0] = 4;
-      lt[0][0] = 2;
-      lt[1][1] = 1;
-      tl[0][1] = 1;
-      tl[1][0] = 1;*/
+    }
 
     if(DEBUG>1) printf("Quantidade de lugares: %u\n",ql);
     if(DEBUG>1) printf("Quantidade de transicoes: %u\n",qt);
