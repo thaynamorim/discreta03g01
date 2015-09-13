@@ -38,23 +38,17 @@ int main(void)
     {
         fscanf(file,"%i %i", &i, &j);
         l[i]=j;
-        printf("%u-l[%i]\n",l[i],i);
     }
-    printf("%d-lctk1\n",lctk);
     for(k=0;k<alt;k++)
     {
         fscanf(file,"%i %i %i", &i, &lctk, &j);
         lt[i][j]= lctk;
-        printf("%u-lt[%i][%i]\n", lt[i][j],i,j);
     }
-    printf("%d-lctk2\n",lctk);
     for(k=0;k<atl;k++)
     {
         fscanf(file,"%i %i %i", &i, &lctk, &j);
         tl[i][j] = lctk;
-        printf("%u-tl[%i][%i]\n", tl[i][j],i,j);
     }
-    printf("%d-lctk3\n",lctk);
     fclose(file);
 
     /*qt = 2;
