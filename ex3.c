@@ -198,6 +198,20 @@ void mzeros(unsigned x[VMAX][VMAX], unsigned m, unsigned n)
     return;
 }
 
+/**
+ * \ingroup GroupUnique
+ *
+ * \brief Gera uma lista aleatoria.
+ *
+ * \details Esta funcao faz uma lista de 0 a n, porem numa ordem aleatoria. 
+ *
+ * \param[out] v A variavel \a v sera a lista numa ordem aleatoria.
+ *
+ * \param[in] n A variavel \a n representa o tamanho do vetor \a v.
+ *
+ * \retval void a funcao retorna nada.
+ *
+ */
 void rlist(unsigned v[VMAX], unsigned n)
 {
     unsigned i = n, j, f;
