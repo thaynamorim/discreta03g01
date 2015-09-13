@@ -27,7 +27,8 @@ int main(void)
     vzeros(l, VMAX);
     mzeros(lt, VMAX, VMAX);
     mzeros(tl, VMAX, VMAX);
-
+    FILE *file;
+    file=fopen("entrada.txt","r");
     scanf("%u",&ql);
     scanf("%u",&qt);
     scanf("%u",&lctk);
@@ -52,6 +53,7 @@ int main(void)
         tl[i][j] = lctk;
         printf("%u\n", tl[i][j]);
     }
+    fclose(file);
 
     /*qt = 2;
       ql = 2;
