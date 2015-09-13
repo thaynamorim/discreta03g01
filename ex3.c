@@ -5,10 +5,10 @@
 #define VMAX 1000
 #define ITER 1000
 #ifndef PCT
-    #define PCT 50
+#define PCT 50
 #endif
 #ifndef DEBUG
-    #define DEBUG 0
+#define DEBUG 0
 #endif
 
 void vzeros(unsigned v[VMAX], unsigned n);
@@ -21,19 +21,46 @@ void entrada(unsigned i, unsigned qt, unsigned ql);
 int main(void)
 {
     unsigned l[VMAX], lt[VMAX][VMAX], tl[VMAX][VMAX], qt, ql, chosen[VMAX];
-    unsigned i, j, k, m, flag, it_escape;
+    unsigned i, j, k, m, flag, it_escape, lctk, alt, atl;
     srand(time(NULL));
     //deixara de existir
     vzeros(l, VMAX);
     mzeros(lt, VMAX, VMAX);
     mzeros(tl, VMAX, VMAX);
-    qt = 2;
-    ql = 2;
-    l[0] = 4;
-    lt[0][0] = 2;
-    lt[1][1] = 1;
-    tl[0][1] = 1;
-    tl[1][0] = 1;
+
+    scanf("%u",&ql);
+    scanf("%u",&qt);
+    scanf("%u",&lctk);
+    scanf("%u",&alt);
+    scanf("%u",&atl);
+
+    for(k=0;k<lctk;k++)
+    {
+        scanf("%u %u", &i, &j);
+        l[i]= j;
+        printf("%u\n", l[i]);
+    }
+    for(k=0;k<alt;k++)
+    {
+        scanf("%u %u %u", &i, &lctk, &j);
+        lt[i][j]= lctk;
+        printf("%u\n", lt[i][j]);
+    }
+    for(k=0;k<atl;k++)
+    {
+        scanf("%u %u %u", &i, &lctk, &j);
+        tl[i][j] = lctk;
+        printf("%u\n", tl[i][j]);
+    }
+
+    /*qt = 2;
+      ql = 2;
+      l[0] = 4;
+      lt[0][0] = 2;
+      lt[1][1] = 1;
+      tl[0][1] = 1;
+      tl[1][0] = 1;*/
+
     if(DEBUG>1) printf("Quantidade de lugares: %u\n",ql);
     if(DEBUG>1) printf("Quantidade de transicoes: %u\n",qt);
     if(DEBUG>1) printf("Token em cada lugar:[");
@@ -155,41 +182,4 @@ void printm(unsigned x[VMAX][VMAX], unsigned n, unsigned m)
             printf("%u ",x[i][j]);
     }
     return;
-}
-void entrada(unsigned i, unsigned qt, unsigned ql)
-{
-    unsigned j, lctk, atl, alt, k, l[VMAX], lt[VMAX][VMAX], tl[VMAX][VMAX];
-
-    /* i = Contador de linha.
-     * j = Contador de coluna.
-     * k = Contador simples.
-     * lctk = Quantidade de lugares com Token.
-     * atl = Arco transicao lugar.
-     * alt = Arco lugar transicao.*/
-
-     scanf("%u",&ql);
-     scanf("%u",&qt);
-     scanf("%u",&lctk);
-     scanf("%u",&alt);
-     scanf("%u",&atl);
-
-     for(k=0;k<lctk;k++)
-     {
-        scanf("%u %u", &i, &j);
-        l[i]= j;
-        printf("%u\n", l[i]);
-     }
-     for(k=0;k<alt;k++)
-     {
-        scanf("%u %u %u", &i, &lctk, &j);
-        lt[i][j]= lctk;
-        printf("%u\n", lt[i][j]);
-     }
-     for(k=0;k<atl;k++)
-     {
-        scanf("%u %u %u", &i, &lctk, &j);
-        tl[i][j] = lctk;
-        printf("%u\n", tl[i][j]);
-     }
-     return;
 }
