@@ -68,19 +68,19 @@
 #include <time.h>
 
 #ifndef VMAX
-#define VMAX 1000
+#define VMAX 1000 /**< Tamanho maximo dos vetores */
 #endif
 
 #ifndef ITER
-#define ITER 1000
+#define ITER 1000 /**< Total de iteracoes */
 #endif
 
 #ifndef PCT
-#define PCT 50
+#define PCT 50 /**< Porcentagem de chance de ativacao de cada transicao */
 #endif
 
 #ifndef DEBUG
-#define DEBUG 0
+#define DEBUG 0 /**< Ativa modo de debug */
 #endif
 
 void vzeros(unsigned v[VMAX], unsigned n);
