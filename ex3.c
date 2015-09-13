@@ -2,14 +2,22 @@
 #include <stdlib.h>
 #include <time.h>
 
+#ifndef VMAX
 #define VMAX 1000
+#endif
+
+#ifndef ITER
 #define ITER 1000
+#endif
+
 #ifndef PCT
 #define PCT 50
 #endif
+
 #ifndef DEBUG
 #define DEBUG 0
 #endif
+
 
 void vzeros(unsigned v[VMAX], unsigned n);
 void mzeros(unsigned x[VMAX][VMAX], unsigned m, unsigned n);
@@ -17,8 +25,10 @@ void rlist(unsigned v[VMAX], unsigned n);
 void printv(unsigned v[VMAX], unsigned n);
 void printm(unsigned x[VMAX][VMAX], unsigned n, unsigned m);
 
+
 int main(void)
 {
+    unsigned t = time(NULL);
     unsigned l[VMAX], lt[VMAX][VMAX], tl[VMAX][VMAX], qt, ql, chosen[VMAX];
     unsigned i, j, k, m, flag, it_escape, lctk, alt, atl;
     srand(time(NULL));
@@ -62,9 +72,9 @@ int main(void)
         if(DEBUG>1) printf("\nInteracao %u:\n",k+1);
         rlist(chosen,qt);
         it_escape = 0;
-        printf("Ordem de tentativa:");
-        printv(chosen,qt);
-        printf("\n");
+        if(DEBUG>1) printf("Ordem de tentativa:");
+        if(DEBUG>1) printv(chosen,qt);
+        if(DEBUG>1) printf("\n");
         for(m=0;m<qt;m++)
         {
             i = chosen[m]; //sorteio i
@@ -101,8 +111,17 @@ int main(void)
             break;
     }
     printf("======= FIM DA SIMULACAO ==========\n");
+    t = time(NULL) - t;
+    printf("Tempo de reprodução do programa: %u segundo(s).\n",t);
+    printf("Numero de iteracoes: %u.\n",k);
+    printf("Lugares com token: \n");
+    for(j=0;j<ql;j++)
+        if(l[j] != 0)
+            printf("Lugar %u: %u tokens \n",j,l[j]);
+
     return EXIT_SUCCESS;
 }
+
 
 void vzeros(unsigned v[VMAX], unsigned n)
 {
@@ -167,3 +186,5 @@ void printm(unsigned x[VMAX][VMAX], unsigned n, unsigned m)
     }
     return;
 }
+
+
