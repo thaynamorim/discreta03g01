@@ -7,11 +7,10 @@
 
 var indexSectionsWithContent =
 {
-  0: "degimpruv",
-  1: "egr",
+  0: "deimprv",
+  1: "er",
   2: "mprv",
-  3: "dipv",
-  4: "u"
+  3: "dipv"
 };
 
 var indexSectionNames =
@@ -19,8 +18,7 @@ var indexSectionNames =
   0: "all",
   1: "files",
   2: "functions",
-  3: "defines",
-  4: "groups"
+  3: "defines"
 };
 
 function convertToId(search)

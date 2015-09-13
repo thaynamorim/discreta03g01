@@ -39,7 +39,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
-      <li><a href="modules.html"><span>Módulos</span></a></li>
       <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -71,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Definições e Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Grupos</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Definições e Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -172,7 +171,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keywordtype">void</span> <a class="code" href="ex3_8c.html#a9eea65f135c946a67da8e658e3a7f285">vzeros</a>(<span class="keywordtype">unsigned</span> v[<a class="code" href="ex3_8c.html#aff4b1376965cfdb32a775db8565d2540">VMAX</a>], <span class="keywordtype">unsigned</span> n);</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keywordtype">void</span> <a class="code" href="ex3_8c.html#a0e7c7062ca76eb0208269333f0022205">mzeros</a>(<span class="keywordtype">unsigned</span> x[<a class="code" href="ex3_8c.html#aff4b1376965cfdb32a775db8565d2540">VMAX</a>][<a class="code" href="ex3_8c.html#aff4b1376965cfdb32a775db8565d2540">VMAX</a>], <span class="keywordtype">unsigned</span> m, <span class="keywordtype">unsigned</span> n);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__GroupUnique.html#gad506fce801fbda11563f84fe8d94d830">rlist</a>(<span class="keywordtype">unsigned</span> v[<a class="code" href="ex3_8c.html#aff4b1376965cfdb32a775db8565d2540">VMAX</a>], <span class="keywordtype">unsigned</span> n);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordtype">void</span> <a class="code" href="ex3_8c.html#ad506fce801fbda11563f84fe8d94d830">rlist</a>(<span class="keywordtype">unsigned</span> v[<a class="code" href="ex3_8c.html#aff4b1376965cfdb32a775db8565d2540">VMAX</a>], <span class="keywordtype">unsigned</span> n);</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keywordtype">void</span> <a class="code" href="ex3_8c.html#a88bde01fc3f4e550f08a14259a960268">printv</a>(<span class="keywordtype">unsigned</span> v[<a class="code" href="ex3_8c.html#aff4b1376965cfdb32a775db8565d2540">VMAX</a>], <span class="keywordtype">unsigned</span> n);</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keywordtype">void</span> <a class="code" href="ex3_8c.html#a20527a91119eb933ea5ec379deac306b">printm</a>(<span class="keywordtype">unsigned</span> x[<a class="code" href="ex3_8c.html#aff4b1376965cfdb32a775db8565d2540">VMAX</a>][<a class="code" href="ex3_8c.html#aff4b1376965cfdb32a775db8565d2540">VMAX</a>], <span class="keywordtype">unsigned</span> n, <span class="keywordtype">unsigned</span> m);</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
@@ -246,7 +245,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">for</span>(k=0;k&lt;<a class="code" href="ex3_8c.html#ab5b92945430bd0cb7a04673282cf70c3">ITER</a>;k++)</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    {</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="ex3_8c.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>&gt;1) printf(<span class="stringliteral">&quot;\nInteracao %u:\n&quot;</span>,k+1);</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <a class="code" href="group__GroupUnique.html#gad506fce801fbda11563f84fe8d94d830">rlist</a>(chosen,qt);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <a class="code" href="ex3_8c.html#ad506fce801fbda11563f84fe8d94d830">rlist</a>(chosen,qt);</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        it_escape = 0;</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="ex3_8c.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>&gt;1) printf(<span class="stringliteral">&quot;Ordem de tentativa:&quot;</span>);</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="ex3_8c.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>&gt;1) <a class="code" href="ex3_8c.html#a88bde01fc3f4e550f08a14259a960268">printv</a>(chosen,qt);</div>
@@ -313,100 +312,130 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordflow">return</span> EXIT_SUCCESS;</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;}</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div>
-<div class="line"><a name="l00230"></a><span class="lineno"><a class="line" href="ex3_8c.html#a9eea65f135c946a67da8e658e3a7f285">  230</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="ex3_8c.html#a9eea65f135c946a67da8e658e3a7f285">vzeros</a>(<span class="keywordtype">unsigned</span> v[<a class="code" href="ex3_8c.html#aff4b1376965cfdb32a775db8565d2540">VMAX</a>], <span class="keywordtype">unsigned</span> n)</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;{</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordtype">unsigned</span> i;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="ex3_8c.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>&gt;4) printf(<span class="stringliteral">&quot;funcao vzeros chamada. Zerando um vetor...\n&quot;</span>);</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordflow">for</span>(i=0;i&lt;n;i++)</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        v[i] = 0;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;}</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
-<div class="line"><a name="l00239"></a><span class="lineno"><a class="line" href="ex3_8c.html#a0e7c7062ca76eb0208269333f0022205">  239</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="ex3_8c.html#a0e7c7062ca76eb0208269333f0022205">mzeros</a>(<span class="keywordtype">unsigned</span> x[<a class="code" href="ex3_8c.html#aff4b1376965cfdb32a775db8565d2540">VMAX</a>][<a class="code" href="ex3_8c.html#aff4b1376965cfdb32a775db8565d2540">VMAX</a>], <span class="keywordtype">unsigned</span> m, <span class="keywordtype">unsigned</span> n)</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;{</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordtype">unsigned</span> i, j;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="ex3_8c.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>&gt;4) printf(<span class="stringliteral">&quot;funcao mzeros chamada. Zerando uma matriz...\n&quot;</span>);</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordflow">for</span>(i=0;i&lt;m;i++)</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="keywordflow">for</span>(j=0;j&lt;n;j++)</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            x[i][j] = 0;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;}</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="comment"> * \ingroup GroupUnique</span></div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="comment"> * \brief Gera uma lista aleatoria.</span></div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="comment"> * \details Esta funcao faz uma lista de 0 a n, porem numa ordem aleatoria. </span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="comment"> * \ingroup GroupUnique</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="comment"> * \brief Troca lixo eletronico pelo numero 0 num vetor.</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="comment"> * \details Esta funcao troca o que seria lido como lixo eletronico pelo numero 0 num vetor.  </span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="comment"> * \param[in] v O vetor \a v eh o vetor que sera lido e recebera os zeros.</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="comment"> * \param[in] n A variavel \a n servira como comparacao pro valor dentro do vetor.</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="comment"> * \retval void A funcao nao retorna nada.</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno"><a class="line" href="ex3_8c.html#a9eea65f135c946a67da8e658e3a7f285">  244</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="ex3_8c.html#a9eea65f135c946a67da8e658e3a7f285">vzeros</a>(<span class="keywordtype">unsigned</span> v[<a class="code" href="ex3_8c.html#aff4b1376965cfdb32a775db8565d2540">VMAX</a>], <span class="keywordtype">unsigned</span> n)</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;{</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordtype">unsigned</span> i;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="ex3_8c.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>&gt;4) printf(<span class="stringliteral">&quot;funcao vzeros chamada. Zerando um vetor...\n&quot;</span>);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordflow">for</span>(i=0;i&lt;n;i++)</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        v[i] = 0;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;}</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="comment"> * \ingroup GroupUnique</span></div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="comment"> * \param[out] v A variavel \a v sera a lista numa ordem aleatoria.</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="comment"> * \brief Troca lixo eletronico pelo numero 0 numa matriz.</span></div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="comment"> * \param[in] n A variavel \a n representa o tamanho do vetor \a v.</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="comment"> * \details Esta funcao troca o que seria lido como lixo eletronico pelo numero 0 numa matriz.  </span></div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="comment"> * \retval void a funcao retorna nada.</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="comment"> * \param[in] x O vetor \a x eh a matriz que sera lida e recebera os zeros.</span></div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00263"></a><span class="lineno"><a class="line" href="group__GroupUnique.html#gad506fce801fbda11563f84fe8d94d830">  263</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__GroupUnique.html#gad506fce801fbda11563f84fe8d94d830">rlist</a>(<span class="keywordtype">unsigned</span> v[<a class="code" href="ex3_8c.html#aff4b1376965cfdb32a775db8565d2540">VMAX</a>], <span class="keywordtype">unsigned</span> n)</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;{</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keywordtype">unsigned</span> i = n, j, f;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keywordflow">while</span>(i)</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    {</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        v[n-i] = rand()%n;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="ex3_8c.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>&gt;4) printf(<span class="stringliteral">&quot;Vetor[%u]: %u (&quot;</span>,n-i,v[n-i]);</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        f = 1;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="keywordflow">for</span>(j=0;j&lt;(n-i);j++)</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            <span class="keywordflow">if</span>(v[j] == v[n-i])</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                f = 0;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="keywordflow">if</span>(f)</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        {</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="ex3_8c.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>&gt;4) printf(<span class="stringliteral">&quot;OK)\n&quot;</span>);</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            i--;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        }</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="ex3_8c.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>&gt;4) printf(<span class="stringliteral">&quot;Falhou)\n&quot;</span>);</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    }</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="ex3_8c.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>&gt;4) printf(<span class="stringliteral">&quot;retorno do rlist: [&quot;</span>);</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="ex3_8c.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>&gt;4) <a class="code" href="ex3_8c.html#a88bde01fc3f4e550f08a14259a960268">printv</a>(v,n);</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="ex3_8c.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>&gt;4) printf(<span class="stringliteral">&quot; ]\n&quot;</span>);</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;}</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;</div>
-<div class="line"><a name="l00288"></a><span class="lineno"><a class="line" href="ex3_8c.html#a88bde01fc3f4e550f08a14259a960268">  288</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="ex3_8c.html#a88bde01fc3f4e550f08a14259a960268">printv</a>(<span class="keywordtype">unsigned</span> v[<a class="code" href="ex3_8c.html#aff4b1376965cfdb32a775db8565d2540">VMAX</a>], <span class="keywordtype">unsigned</span> n)</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;{</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keywordtype">unsigned</span> i;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keywordflow">for</span>(i=0;i&lt;n;i++)</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        printf(<span class="stringliteral">&quot; %u&quot;</span>,v[i]);</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;}</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;</div>
-<div class="line"><a name="l00296"></a><span class="lineno"><a class="line" href="ex3_8c.html#a20527a91119eb933ea5ec379deac306b">  296</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="ex3_8c.html#a20527a91119eb933ea5ec379deac306b">printm</a>(<span class="keywordtype">unsigned</span> x[<a class="code" href="ex3_8c.html#aff4b1376965cfdb32a775db8565d2540">VMAX</a>][<a class="code" href="ex3_8c.html#aff4b1376965cfdb32a775db8565d2540">VMAX</a>], <span class="keywordtype">unsigned</span> n, <span class="keywordtype">unsigned</span> m)</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;{</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordtype">unsigned</span> i, j;</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordflow">for</span>(i=0;i&lt;n;i++)</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    {</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        <span class="keywordflow">for</span>(j=0;j&lt;m;j++)</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;            printf(<span class="stringliteral">&quot;%u &quot;</span>,x[i][j]);</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    }</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;}</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;</div>
-<div class="ttc" id="ex3_8c_html_a0e7c7062ca76eb0208269333f0022205"><div class="ttname"><a href="ex3_8c.html#a0e7c7062ca76eb0208269333f0022205">mzeros</a></div><div class="ttdeci">void mzeros(unsigned x[VMAX][VMAX], unsigned m, unsigned n)</div><div class="ttdef"><b>Definition:</b> <a href="ex3_8c_source.html#l00239">ex3.c:239</a></div></div>
-<div class="ttc" id="ex3_8c_html_ab5b92945430bd0cb7a04673282cf70c3"><div class="ttname"><a href="ex3_8c.html#ab5b92945430bd0cb7a04673282cf70c3">ITER</a></div><div class="ttdeci">#define ITER</div><div class="ttdef"><b>Definition:</b> <a href="ex3_8c_source.html#l00075">ex3.c:75</a></div></div>
-<div class="ttc" id="ex3_8c_html_a20527a91119eb933ea5ec379deac306b"><div class="ttname"><a href="ex3_8c.html#a20527a91119eb933ea5ec379deac306b">printm</a></div><div class="ttdeci">void printm(unsigned x[VMAX][VMAX], unsigned n, unsigned m)</div><div class="ttdef"><b>Definition:</b> <a href="ex3_8c_source.html#l00296">ex3.c:296</a></div></div>
-<div class="ttc" id="ex3_8c_html_aff4b1376965cfdb32a775db8565d2540"><div class="ttname"><a href="ex3_8c.html#aff4b1376965cfdb32a775db8565d2540">VMAX</a></div><div class="ttdeci">#define VMAX</div><div class="ttdef"><b>Definition:</b> <a href="ex3_8c_source.html#l00071">ex3.c:71</a></div></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="comment"> * \param[in] m A variavel \a m servira como comparacao pra linha dentro da matriz.</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="comment"> * \param[in] n A variavel \a n servira como comparacao pra coluna dentro da matriz.</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="comment"> * \retval void A funcao nao retorna nada.</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="comment"> **/</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno"><a class="line" href="ex3_8c.html#a0e7c7062ca76eb0208269333f0022205">  269</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="ex3_8c.html#a0e7c7062ca76eb0208269333f0022205">mzeros</a>(<span class="keywordtype">unsigned</span> x[<a class="code" href="ex3_8c.html#aff4b1376965cfdb32a775db8565d2540">VMAX</a>][<a class="code" href="ex3_8c.html#aff4b1376965cfdb32a775db8565d2540">VMAX</a>], <span class="keywordtype">unsigned</span> m, <span class="keywordtype">unsigned</span> n)</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;{</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keywordtype">unsigned</span> i, j;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="ex3_8c.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>&gt;4) printf(<span class="stringliteral">&quot;funcao mzeros chamada. Zerando uma matriz...\n&quot;</span>);</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordflow">for</span>(i=0;i&lt;m;i++)</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="keywordflow">for</span>(j=0;j&lt;n;j++)</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            x[i][j] = 0;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;}</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="comment"> * \ingroup GroupUnique</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="comment"> * \brief Gera uma lista aleatoria.</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="comment"> * \details Esta funcao faz uma lista de 0 a n, porem numa ordem aleatoria. </span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="comment"> * \param[out] v A variavel \a v sera a lista numa ordem aleatoria.</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="comment"> * \param[in] n A variavel \a n representa o tamanho do vetor \a v.</span></div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="comment"> * \retval void a funcao retorna nada.</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno"><a class="line" href="ex3_8c.html#ad506fce801fbda11563f84fe8d94d830">  293</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="ex3_8c.html#ad506fce801fbda11563f84fe8d94d830">rlist</a>(<span class="keywordtype">unsigned</span> v[<a class="code" href="ex3_8c.html#aff4b1376965cfdb32a775db8565d2540">VMAX</a>], <span class="keywordtype">unsigned</span> n)</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;{</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="keywordtype">unsigned</span> i = n, j, f;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordflow">while</span>(i)</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    {</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        v[n-i] = rand()%n;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="ex3_8c.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>&gt;4) printf(<span class="stringliteral">&quot;Vetor[%u]: %u (&quot;</span>,n-i,v[n-i]);</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        f = 1;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <span class="keywordflow">for</span>(j=0;j&lt;(n-i);j++)</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            <span class="keywordflow">if</span>(v[j] == v[n-i])</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                f = 0;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        <span class="keywordflow">if</span>(f)</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        {</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="ex3_8c.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>&gt;4) printf(<span class="stringliteral">&quot;OK)\n&quot;</span>);</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            i--;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        }</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="ex3_8c.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>&gt;4) printf(<span class="stringliteral">&quot;Falhou)\n&quot;</span>);</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    }</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="ex3_8c.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>&gt;4) printf(<span class="stringliteral">&quot;retorno do rlist: [&quot;</span>);</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="ex3_8c.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>&gt;4) <a class="code" href="ex3_8c.html#a88bde01fc3f4e550f08a14259a960268">printv</a>(v,n);</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="ex3_8c.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>&gt;4) printf(<span class="stringliteral">&quot; ]\n&quot;</span>);</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;}</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;</div>
+<div class="line"><a name="l00318"></a><span class="lineno"><a class="line" href="ex3_8c.html#a88bde01fc3f4e550f08a14259a960268">  318</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="ex3_8c.html#a88bde01fc3f4e550f08a14259a960268">printv</a>(<span class="keywordtype">unsigned</span> v[<a class="code" href="ex3_8c.html#aff4b1376965cfdb32a775db8565d2540">VMAX</a>], <span class="keywordtype">unsigned</span> n)</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;{</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <span class="keywordtype">unsigned</span> i;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keywordflow">for</span>(i=0;i&lt;n;i++)</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        printf(<span class="stringliteral">&quot; %u&quot;</span>,v[i]);</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;}</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;</div>
+<div class="line"><a name="l00326"></a><span class="lineno"><a class="line" href="ex3_8c.html#a20527a91119eb933ea5ec379deac306b">  326</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="ex3_8c.html#a20527a91119eb933ea5ec379deac306b">printm</a>(<span class="keywordtype">unsigned</span> x[<a class="code" href="ex3_8c.html#aff4b1376965cfdb32a775db8565d2540">VMAX</a>][<a class="code" href="ex3_8c.html#aff4b1376965cfdb32a775db8565d2540">VMAX</a>], <span class="keywordtype">unsigned</span> n, <span class="keywordtype">unsigned</span> m)</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;{</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="keywordtype">unsigned</span> i, j;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="keywordflow">for</span>(i=0;i&lt;n;i++)</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    {</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        <span class="keywordflow">for</span>(j=0;j&lt;m;j++)</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            printf(<span class="stringliteral">&quot;%u &quot;</span>,x[i][j]);</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    }</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;}</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;</div>
+<div class="ttc" id="ex3_8c_html_a0e7c7062ca76eb0208269333f0022205"><div class="ttname"><a href="ex3_8c.html#a0e7c7062ca76eb0208269333f0022205">mzeros</a></div><div class="ttdeci">void mzeros(unsigned x[VMAX][VMAX], unsigned m, unsigned n)</div><div class="ttdoc">Troca lixo eletronico pelo numero 0 numa matriz. </div><div class="ttdef"><b>Definition:</b> <a href="ex3_8c_source.html#l00269">ex3.c:269</a></div></div>
+<div class="ttc" id="ex3_8c_html_ab5b92945430bd0cb7a04673282cf70c3"><div class="ttname"><a href="ex3_8c.html#ab5b92945430bd0cb7a04673282cf70c3">ITER</a></div><div class="ttdeci">#define ITER</div><div class="ttdoc">Total de iteracoes. </div><div class="ttdef"><b>Definition:</b> <a href="ex3_8c_source.html#l00075">ex3.c:75</a></div></div>
+<div class="ttc" id="ex3_8c_html_ad506fce801fbda11563f84fe8d94d830"><div class="ttname"><a href="ex3_8c.html#ad506fce801fbda11563f84fe8d94d830">rlist</a></div><div class="ttdeci">void rlist(unsigned v[VMAX], unsigned n)</div><div class="ttdoc">Gera uma lista aleatoria. </div><div class="ttdef"><b>Definition:</b> <a href="ex3_8c_source.html#l00293">ex3.c:293</a></div></div>
+<div class="ttc" id="ex3_8c_html_a20527a91119eb933ea5ec379deac306b"><div class="ttname"><a href="ex3_8c.html#a20527a91119eb933ea5ec379deac306b">printm</a></div><div class="ttdeci">void printm(unsigned x[VMAX][VMAX], unsigned n, unsigned m)</div><div class="ttdef"><b>Definition:</b> <a href="ex3_8c_source.html#l00326">ex3.c:326</a></div></div>
+<div class="ttc" id="ex3_8c_html_aff4b1376965cfdb32a775db8565d2540"><div class="ttname"><a href="ex3_8c.html#aff4b1376965cfdb32a775db8565d2540">VMAX</a></div><div class="ttdeci">#define VMAX</div><div class="ttdoc">\ </div><div class="ttdef"><b>Definition:</b> <a href="ex3_8c_source.html#l00071">ex3.c:71</a></div></div>
 <div class="ttc" id="ex3_8c_html_a840291bc02cba5474a4cb46a9b9566fe"><div class="ttname"><a href="ex3_8c.html#a840291bc02cba5474a4cb46a9b9566fe">main</a></div><div class="ttdeci">int main(void)</div><div class="ttdef"><b>Definition:</b> <a href="ex3_8c_source.html#l00093">ex3.c:93</a></div></div>
-<div class="ttc" id="group__GroupUnique_html_gad506fce801fbda11563f84fe8d94d830"><div class="ttname"><a href="group__GroupUnique.html#gad506fce801fbda11563f84fe8d94d830">rlist</a></div><div class="ttdeci">void rlist(unsigned v[VMAX], unsigned n)</div><div class="ttdoc">Gera uma lista aleatoria. </div><div class="ttdef"><b>Definition:</b> <a href="ex3_8c_source.html#l00263">ex3.c:263</a></div></div>
-<div class="ttc" id="ex3_8c_html_aa6a3b53fdbbfb356d65710e047e27aba"><div class="ttname"><a href="ex3_8c.html#aa6a3b53fdbbfb356d65710e047e27aba">PCT</a></div><div class="ttdeci">#define PCT</div><div class="ttdef"><b>Definition:</b> <a href="ex3_8c_source.html#l00079">ex3.c:79</a></div></div>
-<div class="ttc" id="ex3_8c_html_a9eea65f135c946a67da8e658e3a7f285"><div class="ttname"><a href="ex3_8c.html#a9eea65f135c946a67da8e658e3a7f285">vzeros</a></div><div class="ttdeci">void vzeros(unsigned v[VMAX], unsigned n)</div><div class="ttdef"><b>Definition:</b> <a href="ex3_8c_source.html#l00230">ex3.c:230</a></div></div>
-<div class="ttc" id="ex3_8c_html_a88bde01fc3f4e550f08a14259a960268"><div class="ttname"><a href="ex3_8c.html#a88bde01fc3f4e550f08a14259a960268">printv</a></div><div class="ttdeci">void printv(unsigned v[VMAX], unsigned n)</div><div class="ttdef"><b>Definition:</b> <a href="ex3_8c_source.html#l00288">ex3.c:288</a></div></div>
-<div class="ttc" id="ex3_8c_html_ad72dbcf6d0153db1b8d8a58001feed83"><div class="ttname"><a href="ex3_8c.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a></div><div class="ttdeci">#define DEBUG</div><div class="ttdef"><b>Definition:</b> <a href="ex3_8c_source.html#l00083">ex3.c:83</a></div></div>
+<div class="ttc" id="ex3_8c_html_aa6a3b53fdbbfb356d65710e047e27aba"><div class="ttname"><a href="ex3_8c.html#aa6a3b53fdbbfb356d65710e047e27aba">PCT</a></div><div class="ttdeci">#define PCT</div><div class="ttdoc">Porcentagem de chance de ativacao de cada transicao. </div><div class="ttdef"><b>Definition:</b> <a href="ex3_8c_source.html#l00079">ex3.c:79</a></div></div>
+<div class="ttc" id="ex3_8c_html_a9eea65f135c946a67da8e658e3a7f285"><div class="ttname"><a href="ex3_8c.html#a9eea65f135c946a67da8e658e3a7f285">vzeros</a></div><div class="ttdeci">void vzeros(unsigned v[VMAX], unsigned n)</div><div class="ttdoc">Troca lixo eletronico pelo numero 0 num vetor. </div><div class="ttdef"><b>Definition:</b> <a href="ex3_8c_source.html#l00244">ex3.c:244</a></div></div>
+<div class="ttc" id="ex3_8c_html_a88bde01fc3f4e550f08a14259a960268"><div class="ttname"><a href="ex3_8c.html#a88bde01fc3f4e550f08a14259a960268">printv</a></div><div class="ttdeci">void printv(unsigned v[VMAX], unsigned n)</div><div class="ttdef"><b>Definition:</b> <a href="ex3_8c_source.html#l00318">ex3.c:318</a></div></div>
+<div class="ttc" id="ex3_8c_html_ad72dbcf6d0153db1b8d8a58001feed83"><div class="ttname"><a href="ex3_8c.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a></div><div class="ttdeci">#define DEBUG</div><div class="ttdoc">Ativa modo de debug. </div><div class="ttdef"><b>Definition:</b> <a href="ex3_8c_source.html#l00083">ex3.c:83</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Domingo, 13 de Setembro de 2015 18:24:07 para Exercicio 3 - Simulador de Rede de Petri por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Domingo, 13 de Setembro de 2015 18:43:12 para Exercicio 3 - Simulador de Rede de Petri por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

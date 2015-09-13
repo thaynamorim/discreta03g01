@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['readme_2emd',['README.md',['../README_8md.html',1,'']]],
-  ['rlist',['rlist',['../group__GroupUnique.html#gad506fce801fbda11563f84fe8d94d830',1,'ex3.c']]]
+  ['vmax',['VMAX',['../ex3_8c.html#aff4b1376965cfdb32a775db8565d2540',1,'ex3.c']]],
+  ['vzeros',['vzeros',['../ex3_8c.html#a9eea65f135c946a67da8e658e3a7f285',1,'ex3.c']]]
 ];

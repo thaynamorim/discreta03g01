@@ -227,6 +227,20 @@ int main(void)
 }
 
 
+/**
+ * \ingroup GroupUnique
+ *
+ * \brief Troca lixo eletronico pelo numero 0 num vetor.
+ *
+ * \details Esta funcao troca o que seria lido como lixo eletronico pelo numero 0 num vetor.  
+ *
+ * \param[in] v O vetor \a v eh o vetor que sera lido e recebera os zeros.
+ *
+ * \param[in] n A variavel \a n servira como comparacao pro valor dentro do vetor.
+ *
+ * \retval void A funcao nao retorna nada.
+ *
+ */
 void vzeros(unsigned v[VMAX], unsigned n)
 {
     unsigned i;
@@ -236,6 +250,22 @@ void vzeros(unsigned v[VMAX], unsigned n)
     return;
 }
 
+/**
+ * \ingroup GroupUnique
+ *
+ * \brief Troca lixo eletronico pelo numero 0 numa matriz.
+ *
+ * \details Esta funcao troca o que seria lido como lixo eletronico pelo numero 0 numa matriz.  
+ *
+ * \param[in] x O vetor \a x eh a matriz que sera lida e recebera os zeros.
+ *
+ * \param[in] m A variavel \a m servira como comparacao pra linha dentro da matriz.
+ *
+ * \param[in] n A variavel \a n servira como comparacao pra coluna dentro da matriz.
+ *
+ * \retval void A funcao nao retorna nada.
+ *
+ **/
 void mzeros(unsigned x[VMAX][VMAX], unsigned m, unsigned n)
 {
     unsigned i, j;
