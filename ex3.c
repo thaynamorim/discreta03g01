@@ -16,7 +16,7 @@ void mzeros(unsigned x[VMAX][VMAX], unsigned m, unsigned n);
 void rlist(unsigned v[VMAX], unsigned n);
 void printv(unsigned v[VMAX], unsigned n);
 void printm(unsigned x[VMAX][VMAX], unsigned n, unsigned m);
-void entrada(unsigned i);
+void entrada(unsigned i, unsigned qt, unsigned ql);
 
 int main(void)
 {
@@ -156,9 +156,9 @@ void printm(unsigned x[VMAX][VMAX], unsigned n, unsigned m)
     }
     return;
 }
-void entrada(unsigned i)
+void entrada(unsigned i, unsigned qt, unsigned ql)
 {
-    unsigned j, lctk, atl, alt, k;
+    unsigned j, lctk, atl, alt, k, l[VMAX], lt[VMAX][VMAX], tl[VMAX][VMAX];
 
     /* i = Contador de linha.
      * j = Contador de coluna.
@@ -167,29 +167,29 @@ void entrada(unsigned i)
      * atl = Arco transicao lugar.
      * alt = Arco lugar transicao.*/
 
-    /*    scanf("%u",&ql);
-          scanf("%u",&qt);
-          scanf("%u",&lctk);
-          scanf("%u",&alt);
-          scanf("%u",&atl);
+     scanf("%u",&ql);
+     scanf("%u",&qt);
+     scanf("%u",&lctk);
+     scanf("%u",&alt);
+     scanf("%u",&atl);
 
-          for(k=0;k<lctk;k++)
-          {
-          scanf("%u %u", &i, &j);
-          l[i]= j;
-          printf("%u\n", l[i]);
-          }
-          for(k=0;k<alt;k++)
-          {
-          scanf("%u %u %u", &i &lctk &j);
-          lt[i][j]= lctk;
-          printf("%u\n", lt[i][j]);
-          }
-          for(k=0;k<atl;k++)
-          {
-          scanf("%u %u %u", &i &lctk &j);
-          tl[i][j] = lctk;
-          printf("%u\n", tl[i][j]);
-          }*/
-    return;
+     for(k=0;k<lctk;k++)
+     {
+        scanf("%u %u", &i, &j);
+        l[i]= j;
+        printf("%u\n", l[i]);
+     }
+     for(k=0;k<alt;k++)
+     {
+        scanf("%u %u %u", &i, &lctk, &j);
+        lt[i][j]= lctk;
+        printf("%u\n", lt[i][j]);
+     }
+     for(k=0;k<atl;k++)
+     {
+        scanf("%u %u %u", &i, &lctk, &j);
+        tl[i][j] = lctk;
+        printf("%u\n", tl[i][j]);
+     }
+     return;
 }
