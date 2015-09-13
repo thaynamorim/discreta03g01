@@ -29,12 +29,11 @@ int main(void)
     mzeros(tl, VMAX, VMAX);
     FILE *file;
     file=fopen("entrada.txt","r");
-    scanf("%u",&ql);
-    scanf("%u",&qt);
-    scanf("%u",&lctk);
-    scanf("%u",&alt);
-    scanf("%u",&atl);
-
+    fscanf(file,"%u",&ql);
+    fscanf(file,"%u",&qt);
+    fscanf(file,"%u",&lctk);
+    fscanf(file,"%u",&alt);
+    fscanf(file,"%u",&atl);
     for(k=0;k<lctk;k++)
     {
         scanf("%u %u", &i, &j);
