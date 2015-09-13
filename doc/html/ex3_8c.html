@@ -1,0 +1,353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>Exercicio 3 - Simulador de Rede de Petri: Referência do Arquivo ex3.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Exercicio 3 - Simulador de Rede de Petri
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Este exercício tem como objetivo simular uma Rede de Petri, dado um arquivo de entrada</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="modules.html"><span>Módulos</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Globais</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Definições e Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Grupos</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Referência do Arquivo ex3.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>programa que simula rede de petri.  
+<a href="#details">Mais...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependência de inclusões para ex3.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="ex3_8c__incl.png" border="0" usemap="#ex3_8c" alt=""/></div>
+<map name="ex3_8c" id="ex3_8c">
+</map>
+</div>
+</div>
+<p><a href="ex3_8c_source.html">Vá para o código-fonte deste arquivo.</a></p>
+<table class="memberdecls">
+<tr class="memitem:aff4b1376965cfdb32a775db8565d2540"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ex3_8c.html#aff4b1376965cfdb32a775db8565d2540">VMAX</a>&#160;&#160;&#160;1000</td></tr>
+<tr class="separator:aff4b1376965cfdb32a775db8565d2540"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5b92945430bd0cb7a04673282cf70c3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ex3_8c.html#ab5b92945430bd0cb7a04673282cf70c3">ITER</a>&#160;&#160;&#160;1000</td></tr>
+<tr class="separator:ab5b92945430bd0cb7a04673282cf70c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6a3b53fdbbfb356d65710e047e27aba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ex3_8c.html#aa6a3b53fdbbfb356d65710e047e27aba">PCT</a>&#160;&#160;&#160;50</td></tr>
+<tr class="separator:aa6a3b53fdbbfb356d65710e047e27aba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad72dbcf6d0153db1b8d8a58001feed83"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ex3_8c.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ad72dbcf6d0153db1b8d8a58001feed83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9eea65f135c946a67da8e658e3a7f285"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ex3_8c.html#a9eea65f135c946a67da8e658e3a7f285">vzeros</a> (unsigned v[<a class="el" href="ex3_8c.html#aff4b1376965cfdb32a775db8565d2540">VMAX</a>], unsigned n)</td></tr>
+<tr class="separator:a9eea65f135c946a67da8e658e3a7f285"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e7c7062ca76eb0208269333f0022205"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ex3_8c.html#a0e7c7062ca76eb0208269333f0022205">mzeros</a> (unsigned x[<a class="el" href="ex3_8c.html#aff4b1376965cfdb32a775db8565d2540">VMAX</a>][<a class="el" href="ex3_8c.html#aff4b1376965cfdb32a775db8565d2540">VMAX</a>], unsigned m, unsigned n)</td></tr>
+<tr class="separator:a0e7c7062ca76eb0208269333f0022205"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad506fce801fbda11563f84fe8d94d830"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__GroupUnique.html#gad506fce801fbda11563f84fe8d94d830">rlist</a> (unsigned v[<a class="el" href="ex3_8c.html#aff4b1376965cfdb32a775db8565d2540">VMAX</a>], unsigned n)</td></tr>
+<tr class="memdesc:gad506fce801fbda11563f84fe8d94d830"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gera uma lista aleatoria.  <a href="group__GroupUnique.html#gad506fce801fbda11563f84fe8d94d830">Mais...</a><br /></td></tr>
+<tr class="separator:gad506fce801fbda11563f84fe8d94d830"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88bde01fc3f4e550f08a14259a960268"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ex3_8c.html#a88bde01fc3f4e550f08a14259a960268">printv</a> (unsigned v[<a class="el" href="ex3_8c.html#aff4b1376965cfdb32a775db8565d2540">VMAX</a>], unsigned n)</td></tr>
+<tr class="separator:a88bde01fc3f4e550f08a14259a960268"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20527a91119eb933ea5ec379deac306b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ex3_8c.html#a20527a91119eb933ea5ec379deac306b">printm</a> (unsigned x[<a class="el" href="ex3_8c.html#aff4b1376965cfdb32a775db8565d2540">VMAX</a>][<a class="el" href="ex3_8c.html#aff4b1376965cfdb32a775db8565d2540">VMAX</a>], unsigned n, unsigned m)</td></tr>
+<tr class="separator:a20527a91119eb933ea5ec379deac306b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a840291bc02cba5474a4cb46a9b9566fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ex3_8c.html#a840291bc02cba5474a4cb46a9b9566fe">main</a> (void)</td></tr>
+<tr class="separator:a840291bc02cba5474a4cb46a9b9566fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
+<div class="textblock"><p>programa que simula rede de petri. </p>
+<dl class="section author"><dt>Autor</dt><dd>Hugo Albuquerque de Fonsêca &lt;<a href="#" onclick="location.href='mai'+'lto:'+'hug'+'oa'+'lbu'+'qu'+'erq'+'ue'+'0@g'+'ma'+'il.'+'co'+'m'; return false;">hugoa<span style="display: none;">.nosp@m.</span>lbuq<span style="display: none;">.nosp@m.</span>uerqu<span style="display: none;">.nosp@m.</span>e0@g<span style="display: none;">.nosp@m.</span>mail.<span style="display: none;">.nosp@m.</span>com</a>&gt; </dd>
+<dd>
+Lucas Canejo Jurema &lt;<a href="#" onclick="location.href='mai'+'lto:'+'luc'+'as'+'brg'+'ol'+'201'+'0@'+'hot'+'ma'+'il.'+'co'+'m'; return false;">lucas<span style="display: none;">.nosp@m.</span>brgo<span style="display: none;">.nosp@m.</span>l2010<span style="display: none;">.nosp@m.</span>@hot<span style="display: none;">.nosp@m.</span>mail.<span style="display: none;">.nosp@m.</span>com</a>&gt; </dd>
+<dd>
+Mateus Lenier Rezende &lt;<a href="#" onclick="location.href='mai'+'lto:'+'mat'+'eu'+'sle'+'ni'+'er@'+'gm'+'ail'+'.c'+'om'; return false;">mateu<span style="display: none;">.nosp@m.</span>slen<span style="display: none;">.nosp@m.</span>ier@g<span style="display: none;">.nosp@m.</span>mail<span style="display: none;">.nosp@m.</span>.com</a>&gt; </dd>
+<dd>
+Paulo Vitor Alves Patriota &lt;<a href="#" onclick="location.href='mai'+'lto:'+'pau'+'lo'+'vit'+'or'+'pat'+'ri'+'ota'+'@g'+'mai'+'l.'+'com'; return false;">paulo<span style="display: none;">.nosp@m.</span>vito<span style="display: none;">.nosp@m.</span>rpatr<span style="display: none;">.nosp@m.</span>iota<span style="display: none;">.nosp@m.</span>@gmai<span style="display: none;">.nosp@m.</span>l.co<span style="display: none;">.nosp@m.</span>m</a>&gt; </dd>
+<dd>
+Thayna Maria Morim de Barros Barreto &lt;<a href="#" onclick="location.href='mai'+'lto:'+'tmo'+'ri'+'mba'+'rr'+'eto'+'@g'+'mai'+'l.'+'com'; return false;">tmori<span style="display: none;">.nosp@m.</span>mbar<span style="display: none;">.nosp@m.</span>reto@<span style="display: none;">.nosp@m.</span>gmai<span style="display: none;">.nosp@m.</span>l.com</a>&gt; </dd></dl>
+<dl class="section version"><dt>Versão</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>Data</dt><dd>2015-09-13 </dd></dl>
+
+<p>Definição no arquivo <a class="el" href="ex3_8c_source.html">ex3.c</a>.</p>
+</div><h2 class="groupheader">Definições e macros</h2>
+<a class="anchor" id="ad72dbcf6d0153db1b8d8a58001feed83"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEBUG&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Ativa modo de debug </p>
+
+<p>Definição na linha <a class="el" href="ex3_8c_source.html#l00083">83</a> do arquivo <a class="el" href="ex3_8c_source.html">ex3.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab5b92945430bd0cb7a04673282cf70c3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ITER&#160;&#160;&#160;1000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Total de iteracoes </p>
+
+<p>Definição na linha <a class="el" href="ex3_8c_source.html#l00075">75</a> do arquivo <a class="el" href="ex3_8c_source.html">ex3.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa6a3b53fdbbfb356d65710e047e27aba"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PCT&#160;&#160;&#160;50</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Porcentagem de chance de ativacao de cada transicao </p>
+
+<p>Definição na linha <a class="el" href="ex3_8c_source.html#l00079">79</a> do arquivo <a class="el" href="ex3_8c_source.html">ex3.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aff4b1376965cfdb32a775db8565d2540"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VMAX&#160;&#160;&#160;1000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>maximo dos vetores </p>
+
+<p>Definição na linha <a class="el" href="ex3_8c_source.html#l00071">71</a> do arquivo <a class="el" href="ex3_8c_source.html">ex3.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Funções</h2>
+<a class="anchor" id="a840291bc02cba5474a4cb46a9b9566fe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definição na linha <a class="el" href="ex3_8c_source.html#l00093">93</a> do arquivo <a class="el" href="ex3_8c_source.html">ex3.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0e7c7062ca76eb0208269333f0022205"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mzeros </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>x</em>[VMAX][VMAX], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definição na linha <a class="el" href="ex3_8c_source.html#l00239">239</a> do arquivo <a class="el" href="ex3_8c_source.html">ex3.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a20527a91119eb933ea5ec379deac306b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printm </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>x</em>[VMAX][VMAX], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>m</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definição na linha <a class="el" href="ex3_8c_source.html#l00296">296</a> do arquivo <a class="el" href="ex3_8c_source.html">ex3.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a88bde01fc3f4e550f08a14259a960268"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printv </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>v</em>[VMAX], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definição na linha <a class="el" href="ex3_8c_source.html#l00288">288</a> do arquivo <a class="el" href="ex3_8c_source.html">ex3.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9eea65f135c946a67da8e658e3a7f285"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vzeros </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>v</em>[VMAX], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definição na linha <a class="el" href="ex3_8c_source.html#l00230">230</a> do arquivo <a class="el" href="ex3_8c_source.html">ex3.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Domingo, 13 de Setembro de 2015 18:24:07 para Exercicio 3 - Simulador de Rede de Petri por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>
