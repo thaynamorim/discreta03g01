@@ -29,35 +29,60 @@ void printm(unsigned x[VMAX][VMAX], unsigned n, unsigned m);
 int main(void)
 {
     unsigned t = time(NULL);
-    unsigned l[VMAX], lt[VMAX][VMAX], tl[VMAX][VMAX], qt, ql, chosen[VMAX];
+    unsigned l[VMAX], lt[VMAX][VMAX], tl[VMAX][VMAX], qt, ql, chosen[VMAX], v[VMAX];
     unsigned i, j, k, m, flag, it_escape, lctk, alt, atl;
     srand(time(NULL));
     vzeros(l, VMAX);
+    vzeros(v, VMAX);
     mzeros(lt, VMAX, VMAX);
     mzeros(tl, VMAX, VMAX);
     scanf("%u",&ql);
-    scanf("%u",&qt);
+    scanf("%u",&qt); 
+    if(DEBUG>1) printf("Quantidade de lugares: %u\n",ql);
+    if(ql>VMAX)
+    {
+        printf("Erro linha 1: quantidade de lugares acima do maximo. \n");
+        return -1;
+    }
+    if(DEBUG>1) printf("Quantidade de transicoes: %u\n",qt);
+    if(qt>VMAX)
+    {
+        printf("Erro linha 2: quantidade de transicoes acima do maximo. \n");
+        return -1;
+    }
     scanf("%u",&lctk);
     scanf("%u",&alt);
     scanf("%u",&atl);
     for(k=0;k<lctk;k++)
     {
         scanf("%u %u", &i, &j);
+        if(i>=ql)
+            {
+                printf("Erro linha %u: lugar maior que o definido. \n", 6+k);
+                return -1;
+            }
         l[i]=j;
     }
     for(k=0;k<alt;k++)
     {
         scanf("%u %u %u", &i, &lctk, &j);
+        if(i>=ql||j>=qt)
+        {
+            printf("Erro linha %u: lugar ou transicao acima do definido. \n", 6+lctk+k);
+            return -1;
+        }
         lt[i][j]= lctk;
     }
     for(k=0;k<atl;k++)
     {
         scanf("%u %u %u", &i, &lctk, &j);
+        if(i>=qt||j>=ql)
+        {
+            printf("Erro linha %u: lugar ou transicao acima do definido. \n", 6+lctk+k+alt);
+            return -1;
+        }
         tl[i][j] = lctk;
     }
-
-    if(DEBUG>1) printf("Quantidade de lugares: %u\n",ql);
-    if(DEBUG>1) printf("Quantidade de transicoes: %u\n",qt);
     if(DEBUG>1) printf("Token em cada lugar:[");
     if(DEBUG>1) printv(l,ql);
     if(DEBUG>1) printf(" ]\n");
@@ -78,7 +103,7 @@ int main(void)
         for(m=0;m<qt;m++)
         {
             i = chosen[m]; //sorteio i
-            if(DEBUG>1) printf("Tentativa %u: numero sorteado: [%u]\n",m+1,i);
+            if(DEBUG>0) printf("Tentativa %u: numero sorteado: [%u]\n",m+1,i);
             flag = 1;
             for(j=0;j<ql;j++)
                 if(lt[j][i] != 0)
@@ -92,19 +117,26 @@ int main(void)
                 it_escape = 1; //alguma transicao ativou
                 if((rand()%100 + 1) <= PCT)
                 {
-                    if(DEBUG>1) printf("Transicao %u ativou!\n",i);
+                    if(DEBUG>0) printf("Transicao %u ativou!\n",i);
                     for(j=0;j<ql;j++)
                         if(lt[j][i] != 0)
+                        {
                             l[j] -= lt[j][i];
+                            if(DEBUG>1) printf("Transicao %u consumiu %u token(s) do lugar %u \n", i, lt[j][i], j);
+                        }
                     for(j=0;j<ql;j++)
                         if(tl[i][j] != 0)
+                        {
                             l[j] += tl[i][j];
-                    if(DEBUG>1) printf("Token em cada lugar:[");
-                    if(DEBUG>1) printv(l,ql);
-                    if(DEBUG>1) printf(" ]\n");
+                            v[i]++;     
+                            if(DEBUG>1) printf("Transicao %u produziu %u token(s) \n", i, tl[i][j]);   
+                        }
+                    if(DEBUG>0) printf("Token em cada lugar:[");
+                    if(DEBUG>0) printv(l,ql);
+                    if(DEBUG>0) printf(" ]\n");
                 }
                 else
-                    if(DEBUG>1) printf("Transicao %u decidiu nao ativar.\n",i);
+                    if(DEBUG>0) printf("Transicao %u decidiu nao ativar.\n",i);               
             }
         }
         if(it_escape == 0) //se nada aconteceu com nenhuma transicao
@@ -113,11 +145,19 @@ int main(void)
     printf("======= FIM DA SIMULACAO ==========\n");
     t = time(NULL) - t;
     printf("Tempo de reprodução do programa: %u segundo(s).\n",t);
+    if(k==0)
+        printf("Aviso: nenhuma transicao foi disparada! \n");
     printf("Numero de iteracoes: %u.\n",k);
     printf("Lugares com token: \n");
     for(j=0;j<ql;j++)
         if(l[j] != 0)
             printf("Lugar %u: %u tokens \n",j,l[j]);
+
+    printf("Transicoes disparadas: \n");
+    for(j=0;j<ql;j++)
+        if(v[j] != 0)
+            printf("Transicao %u: disparada %u vezes \n",j,v[j]);
+
 
     return EXIT_SUCCESS;
 }
