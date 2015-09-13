@@ -16,7 +16,6 @@ void mzeros(unsigned x[VMAX][VMAX], unsigned m, unsigned n);
 void rlist(unsigned v[VMAX], unsigned n);
 void printv(unsigned v[VMAX], unsigned n);
 void printm(unsigned x[VMAX][VMAX], unsigned n, unsigned m);
-void entrada(unsigned i, unsigned qt, unsigned ql);
 
 int main(void)
 {
@@ -36,17 +35,17 @@ int main(void)
     fscanf(file,"%u",&atl);
     for(k=0;k<lctk;k++)
     {
-        fscanf(file,"%i %i", &i, &j);
+        fscanf(file,"%u %u", &i, &j);
         l[i]=j;
     }
     for(k=0;k<alt;k++)
     {
-        fscanf(file,"%i %i %i", &i, &lctk, &j);
+        fscanf(file,"%u %u %u", &i, &lctk, &j);
         lt[i][j]= lctk;
     }
     for(k=0;k<atl;k++)
     {
-        fscanf(file,"%i %i %i", &i, &lctk, &j);
+        fscanf(file,"%u %u %u", &i, &lctk, &j);
         tl[i][j] = lctk;
     }
     fclose(file);
@@ -73,7 +72,7 @@ int main(void)
     printf("======= INICIO DA SIMULACAO =======\n");
     for(k=0;k<ITER;k++)
     {
-        if(DEBUG>1) printf("\nIteracao %u:\n",k+1);
+        if(DEBUG>1) printf("\nInteracao %u:\n",k+1);
         rlist(chosen,qt);
         it_escape = 0;
         printf("Ordem de tentativa:");
