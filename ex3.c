@@ -47,6 +47,22 @@
  *                                                
  */
 
+
+/**
+ * \file ex3.c
+ * \brief programa que simula rede de petri. 
+ * \author Hugo Albuquerque de Fonsêca <<hugoalbuquerque0@gmail.com>>
+ * \author Lucas Canejo Jurema <<lucasbrgol2010@hotmail.com>>
+ * \author Mateus Lenier Rezende <<mateuslenier@gmail.com>>
+ * \author Paulo Vitor Alves Patriota <<paulovitorpatriota@gmail.com>>
+ * \author Thayna Maria Morim de Barros Barreto <<tmorimbarreto@gmail.com>>  
+ * \version 1.0
+ * \date 2015-09-13
+ */
+/**
+ * \
+* @{ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -66,7 +82,6 @@
 #ifndef DEBUG
 #define DEBUG 0
 #endif
-
 
 void vzeros(unsigned v[VMAX], unsigned n);
 void mzeros(unsigned x[VMAX][VMAX], unsigned m, unsigned n);
@@ -231,6 +246,20 @@ void mzeros(unsigned x[VMAX][VMAX], unsigned m, unsigned n)
     return;
 }
 
+/**
+ * \ingroup GroupUnique
+ *
+ * \brief Gera uma lista aleatoria.
+ *
+ * \details Esta funcao faz uma lista de 0 a n, porem numa ordem aleatoria. 
+ *
+ * \param[out] v A variavel \a v sera a lista numa ordem aleatoria.
+ *
+ * \param[in] n A variavel \a n representa o tamanho do vetor \a v.
+ *
+ * \retval void a funcao retorna nada.
+ *
+ */
 void rlist(unsigned v[VMAX], unsigned n)
 {
     unsigned i = n, j, f;
