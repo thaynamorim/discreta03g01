@@ -315,6 +315,20 @@ void rlist(unsigned v[VMAX], unsigned n)
     return;
 }
 
+/**
+ * \ingroup GroupUnique
+ *
+ * \brief Imprime os valores de um vetor.
+ *
+ * \details Esta funcao imprime valores de um vetor, em uma ordem crescente. 
+ *
+ * \param[in] v A variavel \a v e um vetor que sera impresso.
+ *
+ * \param[in] n A variavel \a n representa o numero de impressoes \a v.
+ *
+ * \retval void a funcao retorna nada.
+ *
+ */
 void printv(unsigned v[VMAX], unsigned n)
 {
     unsigned i;
@@ -323,6 +337,22 @@ void printv(unsigned v[VMAX], unsigned n)
     return;
 }
 
+/**
+ * \ingroup GroupUnique
+ *
+ * \brief Imprime os valores de uma matriz.
+ *
+ * \details Esta funcao imprime valores de uma matriz,em numa ordem crescente. 
+ *
+ * \param[in] x A variavel \a x e uma matriz que sera impressa.
+ *
+ * \param[in] n A variavel \a n representa a linha da matriz a ser impressa \a x.
+ *
+ * \param[in] m A variavel \a m representa a coluna da matriz a ser impressa \a x.
+ *
+ * \retval void a funcao retorna nada.
+ *
+ */
 void printm(unsigned x[VMAX][VMAX], unsigned n, unsigned m)
 {
     unsigned i, j;
