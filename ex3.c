@@ -22,7 +22,6 @@ int main(void)
     unsigned l[VMAX], lt[VMAX][VMAX], tl[VMAX][VMAX], qt, ql, chosen[VMAX];
     unsigned i, j, k, m, flag, it_escape, lctk, alt, atl;
     srand(time(NULL));
-    //deixara de existir
     vzeros(l, VMAX);
     mzeros(lt, VMAX, VMAX);
     mzeros(tl, VMAX, VMAX);
@@ -57,7 +56,6 @@ int main(void)
     if(DEBUG>1) printf("\nMatriz tl:");
     if(DEBUG>1) printm(tl,qt,ql);
     if(DEBUG>1) printf("\n");
-    //deixara de existir
     printf("======= INICIO DA SIMULACAO =======\n");
     for(k=0;k<ITER;k++)
     {
