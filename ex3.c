@@ -36,22 +36,25 @@ int main(void)
     fscanf(file,"%u",&atl);
     for(k=0;k<lctk;k++)
     {
-        scanf("%u %u", &i, &j);
-        l[i]= j;
-        printf("%u\n", l[i]);
+        fscanf(file,"%i %i", &i, &j);
+        l[i]=j;
+        printf("%u-l[%i]\n",l[i],i);
     }
+    printf("%d-lctk1\n",lctk);
     for(k=0;k<alt;k++)
     {
-        scanf("%u %u %u", &i, &lctk, &j);
+        fscanf(file,"%i %i %i", &i, &lctk, &j);
         lt[i][j]= lctk;
-        printf("%u\n", lt[i][j]);
+        printf("%u-lt[%i][%i]\n", lt[i][j],i,j);
     }
+    printf("%d-lctk2\n",lctk);
     for(k=0;k<atl;k++)
     {
-        scanf("%u %u %u", &i, &lctk, &j);
+        fscanf(file,"%i %i %i", &i, &lctk, &j);
         tl[i][j] = lctk;
-        printf("%u\n", tl[i][j]);
+        printf("%u-tl[%i][%i]\n", tl[i][j],i,j);
     }
+    printf("%d-lctk3\n",lctk);
     fclose(file);
 
     /*qt = 2;
