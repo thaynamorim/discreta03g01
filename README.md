@@ -26,6 +26,7 @@ Este exercicio tem como objetivo simular uma Rede de Petri, dado um arquivo de e
 #Entrada
 
 Para simular a Rede de Petri utilizando este codigo, necessita-se alimenta-lo com um arquivo de entrada. O arquivo nao deve conter nenhum texto, e deve ser formatado _exatamente_ como proposto na tabela abaixo:
+
 Linha          | Descricao
 -------------- | --------------------------------------------
 1              | Quantidade de Lugares
