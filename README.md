@@ -26,16 +26,16 @@ Este exercicio tem como objetivo simular uma Rede de Petri, dado um arquivo de e
 #Entrada
 
 Para simular a Rede de Petri utilizando este codigo, necessita-se alimenta-lo com um arquivo de entrada. O arquivo nao deve conter nenhum texto, e deve ser formatado _exatamente_ como proposto na tabela abaixo:
-| Linha          | Descricao                                      |  Formato      |
-| :------------- | :--------------------------------------------: | :-----------: |
-| 1              | Quantidade de Lugares                          | x             |
-| 2              | Quantidade de Transicoes                       | x             |
-| 3              | Quantidade de Lugares com pelo menos um Token  | x             |
-| 4              | Quantidade de Arcos Lugar -> Transicao         | x             |
-| 5              | Quantidade de Arcos Transicao -> Lugar         | x             |
-| 6,...,x        | Descricao Lugar/Token                          | x x           |
-| x+1,...,y      | Descricao do arco Lugar/Quantidade/Transicao   | x x x         |
-| y+1,...,z      | Descricao do arco Transicao/Quantidade/Lugar   | x x x         |
+Linha          | Descricao
+-------------- | --------------------------------------------
+1              | Quantidade de Lugares
+2              | Quantidade de Transicoes
+3              | Quantidade de Lugares com pelo menos um Token
+4              | Quantidade de Arcos Lugar -> Transicao
+5              | Quantidade de Arcos Transicao -> Lugar
+6,...,x        | Descricao Lugar/Token
+x+1,...,y      | Descricao do arco Lugar/Quantidade/Transicao
+y+1,...,z      | Descricao do arco Transicao/Quantidade/Lugar
 
 Exemplo de input:
 ```
